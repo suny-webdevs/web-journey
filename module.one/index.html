@@ -1,11 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <title>Programming hero: Module 1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="https://github.com/suny-webdevs/programming-hero/blob/main/Module-1/m1favicon.svg" type="image/x-icon">
+  </head>
+  <body>
+      
+    <div class="container">
+        <h1 class="display-5 text-center mb-5 text-decoration-underline">
+            <kbd>Module 1: HTML Tags</kbd>
+        </h1>
+
+
+        <!-- ***> MODULE START <*** -->
+
+
+        <!-- 1. <p></p> tag  -->
+        <p>1. <code>&lt;p&gt;&lt;/p&gt;</code> This is a paragraph tag.</p>
+
+        <!-- 2. <b></b> tag  -->
+        <p>2. <code>&lt;b&gt;&lt;/b&gt;</code> This is a <b>bold</b> tag.</p>
+
+        <!-- 3. <strong></strong> tag -->
+        <p>3. <code>&lt;strong&gt;&lt;/strong&gt;</code> This is a <strong>strong</strong> tag.</p>
+
+        <!-- 4. <i></i> tag  -->
+        <p>4. <code>&lt;i&gt;&lt;/i&gt;</code> This is <i>italic</i> tag.</p>
+
+        <!-- 5. <em></em> tag -->
+        <p>5. <code>&lt;em&gt;&lt;/em&gt;</code> This is <em>em</em> tag.</p>
+
+        <!-- 
+
+            * <strong> and <em> is semantic tag.
+            * semantic == meaningful
+
+        -->
+
+        <!-- 6. <h1></h1> tag  -->
+        <h1>6. <code>&lt;h1&gt;&lt;/h1&gt;</code> This is heading 1 tag</h1>
+
+        <!-- 7. <h2></h2> tag  -->
+        <h2>7. <code>&lt;h2&gt;&lt;/h2&gt;</code> This is heading 2 tag</h2>
+
+        <!-- 8. <h3></h3> tag  -->
+        <h3>8. <code>&lt;h3&gt;&lt;/h3&gt;</code> This is heading 3 tag</h3>
+
+        <!-- 9. <h4></h4> tag  -->
+        <h4>9. <code>&lt;h4&gt;&lt;/h4&gt;</code> This is heading 4 tag</h4>
+
+        <!-- 10. <h5></h5> tag  -->
+        <h5>10. <code>&lt;h5&gt;&lt;/h5&gt;</code> This is heading 5 tag</h5>
+
+        <!-- 11. <h6></h6> tag  -->
+        <h6>11. <code>&lt;h6&gt;&lt;/h6&gt;</code> This is heading 6 tag</h6>
+
+        <!-- 12. <small></small> tag  -->
+        <p>12. <code>&lt;small&gt;&lt;/small&gt;</code> This is <small>small</small> tag.</p>
+
+        <!-- 13. <ol><li></li></ol> ordered list tag  -->
+        <p>13. <code>&lt;ol&gt; &lt;li&gt;&lt;/li&gt; &lt;/ol&gt;</code> This is ordered list tag ---</p>
+        <pre class="border rounded bg-light"><code>
+            &lt;ol&gt;
+                &lt;li&gt; &lt;/li&gt;
+            &lt;/ol&gt;
+        </code></pre>
+        <h5>Ordered list ---</h5>
+        <ol>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+        </ol>
+
+        <!-- 14. <ul><li></li></ul> unordered list tag  -->
+        <p>14. <code>&lt;ul&gt; &lt;li&gt;&lt;/li&gt; &lt;/ul&gt;</code> This is unordered list tag ---</p>
+        <pre class="border rounded bg-light"><code>
+            &lt;ul&gt;
+                &lt;li&gt; &lt;/li&gt;
+            &lt;/ul&gt;
+        </code></pre>
+        <h5>Unordered list ---</h5>
+        <ul>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+        </ul>
+
+        <!-- 15. <div></div> tag  -->
+        <p>15. <code>&lt;div&gt;&lt;/div&gt;</code> This is Division tag. It's create a type of text box.</p>
+
+        <!-- 16. <a href="#"></a> angkor/hyperlink tag  -->
+        <p>16. <code>&lt;a href="#"&gt;&lt;/a&gt;</code> This is angkor/hyperlink tag. <strong>href</strong> means <strong>hypertext reference</strong>.</p>
+
+        <p>Google ---> <a href="https://google.com">google</a> <kbd>open in same tab</kbd></p>
+
+        <p>Programming-hero ---> <a href="https://web.programming-hero.com" target="_blank">programming hero</a> <kbd>open in another tab</kbd></p>
+        <p><strong> #Note: </strong> <kbd>target="_blank"</kbd> is used for open a link an another tab. It should be written after <kbd>href="#"</kbd>.</p>
+
+        <!-- 17. <img src="#" alt="#"> tag  -->
+        <p>17. <code>&lt;img src="#" alt="#"&gt;</code> This is <strong>Image</strong> tag.</p>
+        <h4>* Image link from another website:</h4>
+        <a href="https://mdssk.netlify.app" target="_blank">
+        <img src="https://mdssk.netlify.app/wp-content/uploads/2023/05/MDSSK.png" alt="mdssk.netlify.app"></a>
+        <h6><strong>#Note: </strong></h6>
+        <pre class="border rounded bg-light">
+            * void tag: <code>&lt;img&gt;&lt;/img&gt;</code>
+            * self-closing tag: &lt;/img&gt;
+        </pre>
+        <!-- 
+
+            * void tag: <img></img>
+            * self-closing tag: </img>
+
+        -->
+
+        <!-- 18. <input type="text"> tag  -->
+        <p>18. <code>&lt;input type="..."&gt;</code> This is <strong>Input</strong> tag.</p>
+        <p><h6>#Note: </h6>type = text, password, email, button, file, date, checkbox, radio, submit etc</p>
+        <p>
+            <input type="text" placeholder="input text"></p>
+        <p>
+            <input type="button" value="button"></p>
+        <p>
+            <input type="submit" value="submit">
+        </p>
+        <p>
+            Checkbox <input type="checkbox" name="" id="">
+        </p>
+        <p>
+            <input type="password" name="" id="" placeholder="input password">
+        </p>
+        <p>
+            <input type="datetime-local" name="" id="">
+        </p>
+        <p>
+            <input type="file" name="" id="">
+        </p>
+        <p>
+            <input type="email" name="" id="" placeholder="input email">
+        </p>
+        <p>
+            Radio <input type="radio" name="" id="">
+        </p>
+        <p>
+           #Ref: <a href="https://www.w3schools.com/html/html_form_input_types.asp" target="_blank">Check here all input types</a>
+        </p>
+
+        <!-- 19. <form action="#"></form> tag  -->
+        <p>19. <code>&lt;form action="#"&gt;&lt;/form&gt;</code> This is <strong>Form</strong> tag.</p>
+        <form action="/index.html">
+            <input type="text" placeholder="Username or Email" required>
+            <br>
+            <input type="password" name="" id="" placeholder="Password" required>
+            <br>
+            <select name="" id="" required>
+                <option value="">Select one</option>
+                <option value="batch-1">Batch 1</option>
+                <option value="batch-2">Batch 2</option>
+                <option value="batch-3">Batch 3</option>
+            </select> <br>
+            <input type="checkbox" name="" id="" required> Agree to our terms and conditions.
+            <br>
+            <button type="submit">Submit and login</button>
+        </form>
+        <p>
+            #Ref: <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">Know more about forms</a>
+        </p>
+
+        <h4>HTML Structure: </h4>
+        <pre class="border rounded bg-light">
+            <code>
+                &lt;&#33;DOCTYPE html&gt;
+                &lt;html&gt;
+                   &lt;head&lt;
+                        &lt;meta&gt; tags
+                        &lt;title&gt; &lt;/title&gt;
+                   &lt;/head&gt;
+                   &lt;body&gt;
+                        &lt;header&gt;
+                                
+                        &lt;/header&gt;
+                        &lt;main&gt;
+                        
+                        &lt;/main&gt;
+                        &lt;footer&gt;
+                        
+                        &lt;/footer&gt;
+                   &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+
+        <p>
+            #Ref: <a href="https://www.w3schools.com/html" target="_blank">Learn more about HTML</a>
+        </p>
+
+
+
+        <!-- ***> MODULE END <*** -->
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
