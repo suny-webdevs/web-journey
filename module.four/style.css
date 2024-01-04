@@ -1,5 +1,9 @@
-
-
+a {
+    text-decoration: none;
+}
+header > a > h2 {
+    text-align: center;
+}
 nav > ul {
     display: flex;
 }
