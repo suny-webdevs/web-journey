@@ -303,10 +303,11 @@ hr {
 #footer .footer-container .footer-2 {
     padding: 0 0 0 30px;
 }
-#footer .footer-container .footer-2 > form input,
-#footer .footer-container .footer-2 > form > textarea {
+#footer .footer-container .footer-2 .footer-form .username,
+#footer .footer-container .footer-2 .footer-form .useremail,
+#footer .footer-container .footer-2 .footer-form .usermsg {
     border: none;
-    padding: 18px 30px;
     outline: none;
     margin: 0 0 20px 0;
+    padding: 18px 300px 18px 30px;
 }
