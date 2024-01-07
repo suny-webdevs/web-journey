@@ -4,6 +4,7 @@
 /* Global css */
 :root {
     --primary-color: #FD6E0A;
+    --primary-color-alt: #fff8f3;
     --primary-color-hover: #e66000;
     --font-heading-color: #181818;
     --font-normal-color: #757575;
@@ -40,7 +41,7 @@
     background-color: var(--primary-color-hover);
 }
 .btn-alt {
-    background-color: #fff;
+    background-color: transparent;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     padding: 15px 35px;
@@ -48,6 +49,9 @@
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
+}
+.btn-alt:hover {
+    background-color: #fff;
 }
 button > i {
     margin: 0 10px 0 0;
@@ -200,10 +204,109 @@ nav .menu-item > a {
     margin: 50px 0 0;
 }
 #work .work-container .work-group > .group-2, .group-3, .group-4 {
-    margin: 0 0 0 5px;
+    margin: 0 0 0 20px;
 }
 #work .work-container .work-group > .group-1, .group-2, .group-3, .group-4 {
     padding: 30px 35px;
     background-color: #fff;
     box-shadow: 0 6px 50px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Resume section styles */
+#resume {
+    width: 100%;
+    height: 140vh;
+    padding: 80px 0 100px;
+}
+#resume .resume-container {
+    display: flex;
+    margin: 100px 0 0;
+}
+#resume .resume-container .education > .title,
+#resume .resume-container .experience > .title {
+    color: var(--menu-font-color);
+    font-size: 30px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 20px;
+}
+#resume .resume-container .education .degree > .title,
+#resume .resume-container .experience .exper > .title {
+    color: var(--menu-font-color);
+    font-size: 25px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 5px;
+}
+#resume .resume-container .education .degree > .sub-title,
+#resume .resume-container .experience .exper > .sub-title {
+    color: var(--font-normal-color);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-semi-bold);
+    margin-bottom: 15px;
+}
+#resume .resume-container .education .degree > .desc,
+#resume .resume-container .experience .exper > .desc {
+    color: var(--font-normal-color);
+    font-size: var(--font-size-xs);
+}
+#resume .resume-container .education .degree, 
+#resume .resume-container .experience .exper {
+    padding: 5px 20px 5px 0;
+}
+hr {
+    margin: 30px 30px 30px 0;
+}
+#resume > .btn {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer section styles */
+#footer {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0 0;
+    background-color: #FFF8F3;
+}
+#footer .footer-container {
+    display: flex;
+    justify-content: center;
+}
+#footer .footer-container .footer-1 > .title,
+#footer .footer-container .footer-2 > .title {
+    color: var(--font-heading-color);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 30px 0;
+}
+#footer .footer-container .footer-1 > .desc {
+    color: var(--menu-font-color);
+    font-size: var(--font-size-xs);
+    line-height: 28px;
+    margin: 0 0 20px 0;
+}
+#footer .footer-container .footer-1 {
+    padding: 0 30px 0 0;
+}
+#footer .footer-container .footer-1 .icon-group > a > i {
+    color: var(--primary-color);
+    font-size: 25px;
+}
+#footer .footer-container .footer-1 .icon-group > a > i:hover {
+    color: var(--primary-color-hover);
+}
+#footer .footer-container .footer-1 .icon-group .icon-2, .icon-3 {
+    margin: 0 0 0 10px;
+}
+
+#footer .footer-container .footer-2 {
+    padding: 0 0 0 30px;
+}
+#footer .footer-container .footer-2 > form input,
+#footer .footer-container .footer-2 > form > textarea {
+    border: none;
+    padding: 18px 30px;
+    outline: none;
+    margin: 0 0 20px 0;
 }
