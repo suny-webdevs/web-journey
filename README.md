@@ -10,3 +10,4 @@
 3. [Module-3: Git & GitHub](https://suny-webdevs.github.io/web-journey/module.three)  
 4. [Module-4: More HTML](https://suny-webdevs.github.io/web-journey/module.four/)  
 5. [Module-5: Web Developer Portfolio](https://suny-webdevs.github.io/web-journey/module.five/)  
+6. [Module-6: Assignment-1](https://suny-webdevs.github.io/web-journey/module.six/)  
