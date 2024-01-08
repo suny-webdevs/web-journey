@@ -44,9 +44,7 @@
     font-weight: 700;
     padding: 16px 32px;
     border-radius: 8px;
-    text-transform: uppercase;
     border: none;
-    border-radius: 5px;
     outline: none;
     cursor: pointer;
 }
@@ -58,6 +56,7 @@ section {
     width: 100%;
     height: 100vh;
     padding: 50px 0 50px;
+    border-bottom: 1px solid var(--c-red-title);
 }
 
 /* Main CSS */
@@ -136,8 +135,7 @@ section {
 /* Section-3 section styles */
 #section-3 {
     width: 100%;
-    height: 150vh;
-    padding: 75px 0 0;
+    height: 100%;
 }
 #section-3 .bg {
     width: 100%;
@@ -168,7 +166,7 @@ section {
     line-height: 78px;
     letter-spacing: 6.04px;
     padding: 0 0 0 120px;
-    margin: 60px 0 24px;
+    margin: 25px 0 24px;
 }
 #section-3 .bg .overlay .section-3_container .content .sub-title {
     width: 690px;
@@ -177,11 +175,58 @@ section {
     padding: 0 0 0 120px;
 }
 #section-3 .bg .overlay .section-3_container .content .section-3_btn {
-    background-color: transparent;
+    background-color: rgba(247, 247, 247, 0.1);
+    backdrop-filter: blur(3px);
     margin: 45px 0 0 120px;
 }
 #section-3 .bg .overlay .section-3_container .section-3_img {
     width: 300px;
     height: 360px;
     margin: 90px 130px 65px 0;
+}
+
+/* Section-4 section styles */
+#section-4 {
+    width: 100%;
+    height: 100%;
+}
+#section-4 .section-4_bg {
+    width: 100%;
+    height: 522px;
+    border-radius: 10px;
+}
+#section-4 .section-4_bg .overlay {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 0, 0, 0.20), rgba(255, 0, 0, 0.02));
+    border-radius: 10px;
+}
+#section-4 .section-4_bg .overlay .section-4_container {
+    width: 100%;
+    height: 100%;
+}
+#section-4 .section-4_bg .overlay .section-4_container .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 0;
+}
+#section-4 .section-4_container .content h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 56px;
+    text-align: center;
+} 
+#section-4 .section-4_container .content .title {
+    color: var(--c-red-title);
+}
+#section-4 .section-4_container .content .desc {
+    color: var(--c-dark-title);
+}
+#section-4 .section-4_container .section-4_btn {
+    background-color: var(--c-red-title);
+    color: #fff;
+    margin: 50px 0 0;
 }
