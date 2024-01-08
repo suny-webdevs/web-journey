@@ -22,6 +22,7 @@
     color: var(--c-dark-title);
     font-size: 48px;
     font-weight: 900;
+    margin: 15px 0 0;
 }
 .base-red-sub_title {
     color: var(--c-red-title);
@@ -103,7 +104,7 @@ section {
 /* Section-2 section styles */
 #section-2 {
     width: 100%;
-    height: 130vh;
+    height: 100%;
 }
 #section-2 .section-2_container {
     display: flex;
@@ -230,3 +231,53 @@ section {
     color: #fff;
     margin: 50px 0 0;
 }
+
+/* Section-5 section styles */
+#section-5 {
+    width: 100%;
+    height: 100%;
+}
+#section-5 .s5-container {
+    display: flex;
+}
+#section-5 .s5-container .block-l {
+    margin: 200px 0 0;
+}
+#section-5 .s5-container .block-l .desc {
+    width: 393px;
+    margin: 20px 0 0;
+}
+#section-5 .s5-container .block-m .img-bg {
+    width: 380px;
+    height: 380px;
+    border: 15px solid var(--c-red-title);
+    border-radius: 50%;
+    margin: 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section-5 .s5-container .block-m .img-bg img {
+    width: 330px;
+    height: 330px;
+}
+#section-5 .s5-container .block-r {
+    margin: 180px 0 0 20px;
+}
+#section-5 .s5-container .block-r .title {
+    color: var(--c-red-title);
+    font-size: 48px;
+    font-weight: 700;
+}
+#section-5 .s5-container .block-r .desc {
+    color: var(--c-desc);
+    font-size: 18px;
+    line-height: 32px;
+    padding: 16px 0 0;
+    width: 276px;
+}
+#section-5 .s5-container .block-r .block-r-img {
+    margin: 45px 0 0;
+}
+
+/* Section-6 section styles */
