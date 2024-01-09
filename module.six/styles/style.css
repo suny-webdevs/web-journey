@@ -36,7 +36,7 @@
 }
 .base-desc {
     color: var(--c-desc);
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
 }
 .base-btn {
@@ -281,3 +281,68 @@ section {
 }
 
 /* Section-6 section styles */
+#section-6 {
+    width: 100%;
+    height: 150vh;
+}
+#section-6 .s6-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#section-6 .s6-container > .s6-title, .s6-sub-title, .s6-desc {
+    text-align: center;
+}
+#section-6 .s6-container .s6-title, .title-1, .title-2 {
+    font-family: var(--ff-merriweather);
+    font-size: 72px;
+    font-weight: 900;
+}
+#section-6 .s6-container .s6-title .title-1 {
+    color: var(--c-red-title);
+}
+#section-6 .s6-container .s6-title .title-2 {
+    color: var(--c-dark-title);
+}
+#section-6 .s6-container .s6-desc {
+    width: 750px;
+    margin: 10px 0 0;
+}
+#section-6 .s6-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#section-6 .s6-container .images {
+    width: 1140px;
+    height: 200px;
+    background-color: var(--c-red-title);
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#section-6 .s6-container .img-3 {
+    width: 350px;
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+}
+#section-6 .s6-container .img-2 {
+    width: 250px;
+    position: absolute;
+    bottom: 240px;
+    right: 230px;
+    z-index: 1;
+}
+#section-6 .s6-container .img-1 {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
