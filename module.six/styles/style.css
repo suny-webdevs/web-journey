@@ -245,7 +245,7 @@ section {
 #section-5 .s5-container .block-l .desc {
     width: 393px;
 }
-#section-5 .s5-container .block-m .img-bg {
+#section-5 .s5-container .block-m .bg-circle {
     width: 380px;
     height: 380px;
     border: 15px solid var(--c-red-title);
@@ -363,7 +363,11 @@ section {
 }
 #section-7 .s7-container .gallery .img:hover {
     transform: translateY(-5px);
-    transition: all 0.5s;
+    transition: all 0.2s;
+}
+#section-7 .s7-container .gallery .img:not(:hover) {
+    transform: translateY(0);
+    transition: all 0.2s;
 }
 
 /* Section-8 sections styles */
@@ -403,7 +407,11 @@ section {
     margin: 50px 0 0;
 }
 #section-8 .s8-bg .s8-container:hover .s8-icon {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    transition: all 0.5s;
+}
+#section-8 .s8-bg .s8-container:not(:hover) .s8-icon {
+    transform: translateY(0);
     transition: all 0.5s;
 }
 #section-8 .s8-bg .s8-container .subs .subs-mail {
@@ -469,7 +477,11 @@ section {
 }
 #footer .footer-container .f2-content .icon-grp .icon:hover {
     transform: translateY(-5px);
-    transition: all 0.5s;
+    transition: all 0.2s;
+}
+#footer .footer-container .f2-content .icon-grp .icon:not(:hover) {
+    transform: translateY(0);
+    transition: all 0.2s;
 }
 #footer .footer-container .f3-content {
     display: flex;
