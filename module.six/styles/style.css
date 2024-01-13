@@ -306,6 +306,10 @@ section {
 #section-6 .s6-container {
     width: 100%;
     height: 100%;
+}
+#section-6 .s6-container .s6-imgs {
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 #section-6 .s6-container .images {
@@ -317,8 +321,6 @@ section {
     border-bottom-left-radius: 16px;
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
 }
 #section-6 .s6-container .img-3 {
     width: 350px;

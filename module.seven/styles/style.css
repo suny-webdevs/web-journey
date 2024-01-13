@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 80vh;
+}
+
+.nav-menu {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+.nav-menu .menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-menu .menu .menu-item a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-menu .menu .c-menu-item a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.hero {
+    /* height: 80vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000; */
+}
+.hero > h1 {
+    font-size: 80px;
+    user-select: none;
+}
+
+/* Calender */
+.c-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 100px auto;
+    margin: auto;
+    border: 1px solid #FFF;
+}
+
+
+.c-title {
+    color: #fff;
+    font-size: 50px;
+    margin: 20px 0;
+    text-align: center;
+}
+.calender {
+    color: #FFF;
+    margin: 100px auto;
+}
+.calender .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 70px);
+    grid-template-rows: repeat(6, 50px);
+    column-gap: 10px;
+    row-gap: 5px;
+    margin: 15px 0 0;
+}
+.calender .dates .day {
+    color: aqua;
+}
+.calender .dates .date, .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(100px);
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/* Grid */
+.g-container {
+    display: grid;
+    grid-template-columns: 80vw;
+    grid-template-rows: 100px repeat(8, 100vh);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec {
+    background-color: darkgray;
+    /* padding: 50px; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
