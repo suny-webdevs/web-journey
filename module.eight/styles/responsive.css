@@ -27,3 +27,38 @@ a {
     font-size: 20px;
     color: darkgray;
 }
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px 50px;
+}
+.box-container .box {
+    border: 1px solid darkblue;
+    padding: 20px;
+    border-radius: 5px;
+}
+.box-container .box .image > img {
+    width: 100%;
+    border-radius: 5px;
+}
+.box-container .box .title > h1 {
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 755px) {
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .box-container .box {
+        border: 1px solid darkgray;
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
