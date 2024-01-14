@@ -52,3 +52,9 @@ a {
 .box-6, .box-7, .box-9, .box-10 {
     background-color: #F5565B;
 }
+
+@media screen and (max-width: 576px) {
+    #header .nav .menu .menu-item .menu-link {
+        font-size: 14px;
+    }
+}

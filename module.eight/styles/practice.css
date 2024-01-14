@@ -60,6 +60,9 @@ img {
 }
 
 @media screen and (max-width: 576px) {
+    #header .nav .menu .menu-item .menu-link {
+        font-size: 14px;
+    }
     .row {
         flex-direction: column;
         height: auto;

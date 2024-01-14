@@ -42,3 +42,9 @@ a {
     font-weight: 700;
     text-align: center;
 }
+
+@media screen and (max-width: 576px) {
+    #header .nav .menu .menu-item .menu-link {
+        font-size: 14px;
+    }
+}

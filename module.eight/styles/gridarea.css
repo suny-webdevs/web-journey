@@ -81,6 +81,9 @@ ul {
     }
 }
 @media screen and (min-width: 576px) and (max-width: 992px) {
+    #header .nav .menu .menu-item .menu-link {
+        font-size: 14px;
+    }
     .container {
         grid-template-areas: 
             "head head head"
