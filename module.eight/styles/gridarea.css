@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.active-link {
+    text-decoration: underline;
+    color: #000 !important;
+    font-weight: 600;
+}
+
+#header .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .nav .menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 30px 0;
+}
+#header .nav .menu .menu-item .menu-link {
+    font-size: 20px;
+    color: darkgray;
+}
+
+.container {
+    padding: 50px;
+    display: grid;
+    grid-template-areas: 
+        "head head head head"
+        "nave article article sidebar"
+        "nave article article adver"
+        "foot foot foot foot"
+    ;
+    gap: 20px;
+}
+.head, .nave, .article, .sidebar, .adver, .foot {
+    background-color: #FEEB98;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+}
+.head { grid-area: head; }
+.nave { grid-area: nave; }
+.article { grid-area: article; display: flex; gap: 20px;}
+.sidebar { grid-area: sidebar; }
+.adver { grid-area: adver; }
+.foot { grid-area: foot; }
+
+@media screen and (max-width: 576px) {
+    .container {
+        grid-template-areas: 
+            "head"
+            "nave"
+            "article"
+            "sidebar"
+            "adver"
+            "foot"
+        ;
+    }
+    .nave > ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .article {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .container {
+        grid-template-areas: 
+            "head head head"
+            "nave nave nave"
+            "sidebar article article"
+            "sidebar article article"
+            "adver foot foot"
+        ;
+    }
+    .nave > ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .article {
+        flex-direction: column;
+    }
+}
