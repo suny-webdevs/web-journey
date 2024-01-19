@@ -13,4 +13,4 @@
 6. [Module-6: Assignment-1](https://suny-webdevs.github.io/web-journey/module.six/)  
 7. [Module-7: Responsive](https://suny-webdevs.github.io/web-journey/module.seven/)  
 8. [Module-8: Grid, Media-query](https://suny-webdevs.github.io/web-journey/module.eight/)  
-9. [Module-12: Grid, Media-query](https://suny-webdevs.github.io/web-journey/module.12th/)  
+9. [Module-12: Tailwind CSS](https://suny-webdevs.github.io/web-journey/module.12th/)  
