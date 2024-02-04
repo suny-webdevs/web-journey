@@ -37,8 +37,8 @@ console.log(`Mathematics = ${math}\nBiology = ${bio}\nChemistry = ${che}\nPhysic
 console.log(`\nTask - 3\n`);
 
 var givenNumber = 119
-var outNumber = givenNumber % 5
-console.log(`Output (${givenNumber} % 5) = ${outNumber}`);
+var outNumber = givenNumber % 6
+console.log(`Output (${givenNumber} % 6) = ${outNumber}`);
 
 /*
 ********************************
