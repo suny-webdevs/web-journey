@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn {
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px);
+            padding: 10px 15px;
+            font-size: 20px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" type="button">Change Background Color</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', () => {
+            const letters = '0123456789ABCDEF'
+            let color = '#'
+            for(let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)]
+            }
+            // console.log(color);
+            document.body.style.backgroundColor = color
+        })
+    </script>
+</body>
+</html>

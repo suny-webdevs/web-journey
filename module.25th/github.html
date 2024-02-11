@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github validation</title>
+    <style>
+        #delete-btn {
+            padding: 5px 20px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: #d8d8d8;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="repo">Github repository</h1>
+    <input id="delete-input" type="text" placeholder="Type 'delete' to delete">
+    <button id="delete-btn" type="submit" disabled>Delete</button>
+    <div id="alertBox"></div>
+
+    <script>
+        document.getElementById('delete-input').addEventListener('keyup', function(e) {
+            const inputValue = e.target.value 
+            const btn = document.getElementById('delete-btn')
+
+            if(inputValue === 'delete') {
+                btn.removeAttribute('disabled')
+                btn.style.backgroundColor = 'red'
+                btn.style.color = '#fff'
+            } 
+            else {
+                btn.setAttribute('disabled', true)
+                btn.style.backgroundColor = '#d8d8d8'
+                btn.style.color = '#555'
+            }
+        })
+        document.getElementById('delete-btn').addEventListener('click', function() {
+            const repo = document.getElementById('repo')
+            const alertBox = document.getElementById('alertBox')
+            const deleteInput = document.getElementById('delete-input')
+            const p = document.createElement('p')
+
+            p.innerText = 'Repo deleted successfully!'
+            alertBox.appendChild(p)
+            deleteInput.value = ''
+
+            repo.style.display = 'none'
+            p.style.padding = '10px 15px'
+            p.style.backgroundColor = 'lightgreen'
+            p.style.borderRadius = '2px'
+            p.style.color = '#494949'
+            p.style.fontFamily = 'Arial'
+            alertBox.style.width = '300px'
+
+
+        })
+    </script>
+</body>
+</html>

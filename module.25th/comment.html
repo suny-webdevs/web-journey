@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment box</title>
+</head>
+<body>
+    <h1>Comment your post</h1>
+    <div id="post-container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse ab iure ratione, architecto totam dolorum beatae, officiis ea quam ullam nulla alias ducimus. Quam debitis nobis ut expedita nesciunt! Suscipit nostrum quod odit possimus, quia autem commodi cumque architecto rerum, praesentium quis, officia non aliquam. Quos sunt ut minima expedita.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse ab iure ratione, architecto totam dolorum beatae, officiis ea quam ullam nulla alias ducimus. Quam debitis nobis ut expedita nesciunt! Suscipit nostrum quod odit possimus, quia autem commodi cumque architecto rerum, praesentium quis, officia non aliquam. Quos sunt ut minima expedita.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse ab iure ratione, architecto totam dolorum beatae, officiis ea quam ullam nulla alias ducimus. Quam debitis nobis ut expedita nesciunt! Suscipit nostrum quod odit possimus, quia autem commodi cumque architecto rerum, praesentium quis, officia non aliquam. Quos sunt ut minima expedita.</p>
+    </div>
+    <div>
+        <textarea name="" id="comment-box" cols="50" rows="5" placeholder="Write your comment..."></textarea>
+        <button id="post-btn" type="submit">Post</button>
+    </div>
+
+    <script>
+        document.getElementById('post-btn').addEventListener('click', function() {
+            const commentBox = document.getElementById('comment-box')
+            const newComment = commentBox.value 
+            const postContainer = document.getElementById('post-container')
+            const p = document.createElement('p')
+            p.innerText = newComment
+            postContainer.appendChild(p)
+            commentBox.value = ''
+
+            commentBox.style.padding = '5px'
+            p.style.border = '1px solid #999'
+            p.style.backgroundColor = '#f7f7f7'
+            p.style.borderRadius = '50px'
+            p.style.padding = '5px 10px'
+            p.style.fontFamily = 'Arial'
+            
+        })
+    </script>
+</body>
+</html>

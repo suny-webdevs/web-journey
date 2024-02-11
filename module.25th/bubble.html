@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body>
+    <h1>Explore more Event</h1>
+    <section>
+        <ul id="list-container">
+        <li class="item">Item-1</li>
+        <li class="item">Item-2</li>
+        <li class="item">Item-3</li>
+        <li class="item">Item-4</li>
+        <li class="item">Item-5</li>
+    </ul>
+    </section>
+    <button id="btn" type="button">Add Item</button>
+
+    <script>
+        document.getElementById('list-container').addEventListener('click', function(e) {
+            e.target.parentNode.removeChild(e.target)
+        })
+        document.getElementById('btn').addEventListener('click', function() {
+            const listContainer = document.getElementById('list-container')
+            const list = document.createElement('li')
+            list.innerText = 'This is new item'
+            listContainer.appendChild(list)
+        })
+    </script>
+</body>
+</html>
