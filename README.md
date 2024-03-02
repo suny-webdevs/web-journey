@@ -15,3 +15,4 @@
 8. [Module-8: Grid, Media-query](https://suny-webdevs.github.io/web-journey/module.eight/)  
 9. [Module-12: Tailwind CSS](https://suny-webdevs.github.io/web-journey/module.12th/)  
 10. [Module-13: DaisyUI: Tailwind CSS](https://suny-webdevs.github.io/web-journey/module.13th/)  
+11. [Module-34: API](https://suny-webdevs.github.io/web-journey/module.34th/)  
