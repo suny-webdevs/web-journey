@@ -1,0 +1,18 @@
+.country {
+    border: 2px solid #999;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+p {
+    line-height: 5px;
+}
+
+button {
+    margin-top: 15px;
+}

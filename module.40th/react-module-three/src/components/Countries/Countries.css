@@ -1,0 +1,30 @@
+.countries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 5px; */
+}
+
+.visited-countries {
+    border: 2px solid lightgreen;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+@media screen and (max-width: 640px) {
+    .countries {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* gap: 5px; */
+    }
+}
+@media screen and (min-width: 641px) and (max-width: 768px) {
+    .countries {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 5px; */
+    }
+}
