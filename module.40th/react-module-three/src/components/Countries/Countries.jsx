@@ -17,12 +17,28 @@ const Countries = () => {
         setVisitedCountries(newVisitedCountries)
     }
 
+    const listStyle = {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px'
+    }
+    const listImageStyle = {
+        width: '25px',
+        height: '20px',
+        borderRadius: '3px'
+    }
+
     return (
         <div>
             <h2>Visited Countries ({visitedCountries.length})</h2>
             <ol>
                 {
-                    visitedCountries.map(country => <li style={{display: 'flex', alignItems: 'center', gap: '10px'}} key={country.cca3}> <img style={{width: '25px', height: '20px', borderRadius: '3px'}} src={country.flags.png} alt={country.flags.alt} /> <span>{country.name.common}</span></li>)
+                    visitedCountries.map(({name, flags}, index) => 
+                        <li style={listStyle} key={index}> 
+                            <img style={listImageStyle} src={flags.svg} alt={flags.alt} />
+                            <span>{name.common}</span>
+                        </li>
+                    )
                 }
             </ol>
             <h2>Countries: {counties.length} </h2>

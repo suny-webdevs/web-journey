@@ -16,3 +16,7 @@ p {
 button {
     margin-top: 15px;
 }
+
+img {
+    border-radius: 5px;
+}
