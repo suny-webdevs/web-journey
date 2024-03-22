@@ -1,0 +1,6 @@
+.bg-animated {
+  background-image: url(.././assets/bg-animated.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}

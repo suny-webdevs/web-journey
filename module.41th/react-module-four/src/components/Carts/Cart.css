@@ -1,0 +1,37 @@
+.cart-container {
+    width: 1178px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.card-product-item {
+    background-color: lightcoral;
+    color: white;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.title-img-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.cart-product-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.batch {
+    background-color: lightcoral;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+}

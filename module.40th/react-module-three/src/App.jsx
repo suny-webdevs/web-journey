@@ -8,6 +8,8 @@ function App() {
       <h1>React Module Three</h1>
 
       <Countries />
+
+      <p style={{textAlign: 'center'}}>&copy; <a href="https://github.com/suny-webdevs">suny-webdevs</a> is the copyright holder.</p>
     </>
   )
 }
