@@ -7,11 +7,13 @@ import Blogs from "./pages/Blogs"
 import Bookmarks from "./pages/Bookmarks"
 import Home from "./pages/Home"
 import PostDetails from "./components/PostDetails/PostDetails"
+import ErrorPage from "./pages/ErrorPage"
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
