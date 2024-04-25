@@ -1,0 +1,13 @@
+.bg-footer-img {
+  background-image: url(../../assets/bg-footer.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-footer-lg {
+  background-image: url(../../assets/bg-footer-lg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

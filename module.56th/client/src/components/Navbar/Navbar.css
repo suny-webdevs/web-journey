@@ -1,0 +1,6 @@
+.bg-navbar-img {
+  background-image: url(../../assets/bg-navbar.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
