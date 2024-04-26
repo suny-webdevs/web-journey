@@ -1,9 +1,15 @@
+import { useState } from "react"
 import { PiCoffeeFill } from "react-icons/pi"
 import { Link } from "react-router-dom"
+import Coffee from "./Coffee"
+import "./Coffee.css"
+import PropTypes from "prop-types"
 
-const Coffees = () => {
+const Coffees = ({ loadedCoffees }) => {
+  const [coffees, setCoffees] = useState(loadedCoffees)
+
   return (
-    <div className="my-20">
+    <div className="my-20 bg-add-coffee">
       <div className="flex flex-col items-center">
         <p className="text-base font-raleway font-medium">
           --- Sip & Savor ---
@@ -20,9 +26,23 @@ const Coffees = () => {
       </div>
 
       {/* Created Coffees will show here */}
-      <div></div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-40 mt-10">
+        {coffees.map((coffee) => (
+          <Coffee
+            key={coffee._id}
+            coffee={coffee}
+            coffees={coffees}
+            setCoffees={setCoffees}
+          />
+        ))}
+      </div>
     </div>
   )
+}
+
+Coffees.propTypes = {
+  loadedCoffees: PropTypes.array,
 }
 
 export default Coffees

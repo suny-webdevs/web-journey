@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { FaArrowLeft } from "react-icons/fa6"
+import toast, { Toaster } from "react-hot-toast"
 import "./Coffee.css"
 
 const AddCoffee = () => {
@@ -14,6 +15,7 @@ const AddCoffee = () => {
     const category = form.category.value
     const details = form.details.value
     const photo = form.photo.value
+    const price = form.price.value
     // const file = form.file.value
 
     const coffee = {
@@ -24,13 +26,32 @@ const AddCoffee = () => {
       category,
       details,
       photo,
+      price,
     }
 
-    console.log(coffee)
+    fetch("http://localhost:4000/coffee", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(coffee),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          toast.success("Coffee added successfully")
+        }
+
+        form.reset()
+      })
   }
 
   return (
     <div className="bg-add-coffee flex flex-col justify-center items-center pt-10 pb-20">
+      <Toaster
+        position="top-center"
+        reverseOrder="false"
+      />
       <div className="w-full flex justify-start">
         <Link
           to="/"
@@ -39,7 +60,7 @@ const AddCoffee = () => {
           <FaArrowLeft /> Back to home
         </Link>
       </div>
-      <div className="card shrink-0 w-full max-w-5xl shadow-md bg-[#F7F7F7] flex justify-center items-center gap-7 px-5 py-10">
+      <div className="card shrink-0 w-full max-w-5xl shadow-md bg-[#F7F7F7B3] flex justify-center items-center gap-7 px-5 py-10">
         <div className="w-full max-w-3xl">
           <h1 className="text-center text-5xl text-[#374151] text-shadow-xl font-rancho mt-10">
             Add new coffee
@@ -139,7 +160,7 @@ const AddCoffee = () => {
               required
             />
           </div>
-          <div className="form-control md:col-span-2">
+          <div className="form-control">
             <label className="label">
               <span className="label-text text-base text-[#1B1A1ACC] font-raleway font-bold">
                 Photo
@@ -149,6 +170,20 @@ const AddCoffee = () => {
               type="url"
               name="photo"
               placeholder="Enter photo url"
+              className="input input-bordered"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text text-base text-[#1B1A1ACC] font-raleway font-bold">
+                Price
+              </span>
+            </label>
+            <input
+              type="text"
+              name="price"
+              placeholder="Enter coffee price"
               className="input input-bordered"
               required
             />

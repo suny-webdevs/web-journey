@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom"
+import { Link, useLoaderData, useNavigate } from "react-router-dom"
 import { FaArrowLeft } from "react-icons/fa6"
 import "./Coffee.css"
+import toast, { Toaster } from "react-hot-toast"
 
 const UpdateCoffee = () => {
+  const loadedCoffee = useLoaderData()
+  const navigate = useNavigate()
+
+  const { _id, photo, name, chef, supplier, taste, category, details, price } =
+    loadedCoffee
+
   const handleUpdateCoffee = (e) => {
     e.preventDefault()
 
@@ -14,6 +21,7 @@ const UpdateCoffee = () => {
     const category = form.category.value
     const details = form.details.value
     const photo = form.photo.value
+    const price = form.price.value
     // const file = form.file.value
 
     const coffee = {
@@ -24,13 +32,32 @@ const UpdateCoffee = () => {
       category,
       details,
       photo,
+      price,
     }
 
-    console.log(coffee)
+    fetch(`http://localhost:4000/coffee/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(coffee),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          toast.success("Coffee updated successfully")
+          form.reset()
+          navigate("/")
+        }
+      })
   }
 
   return (
     <div className="bg-add-coffee flex flex-col justify-center items-center pt-10 pb-20">
+      <Toaster
+        position="top-center"
+        reverseOrder="false"
+      />
       <div className="w-full flex justify-start">
         <Link
           to="/"
@@ -64,6 +91,7 @@ const UpdateCoffee = () => {
             <input
               type="text"
               name="name"
+              defaultValue={name}
               placeholder="Enter coffee name"
               className="input input-bordered"
               required
@@ -78,6 +106,7 @@ const UpdateCoffee = () => {
             <input
               type="text"
               name="chef"
+              defaultValue={chef}
               placeholder="Enter coffee chef"
               className="input input-bordered"
               required
@@ -92,6 +121,7 @@ const UpdateCoffee = () => {
             <input
               type="text"
               name="supplier"
+              defaultValue={supplier}
               placeholder="Enter coffee supplier"
               className="input input-bordered"
               required
@@ -106,6 +136,7 @@ const UpdateCoffee = () => {
             <input
               type="text"
               name="taste"
+              defaultValue={taste}
               placeholder="Enter coffee taste"
               className="input input-bordered"
               required
@@ -120,6 +151,7 @@ const UpdateCoffee = () => {
             <input
               type="text"
               name="category"
+              defaultValue={category}
               placeholder="Enter coffee category"
               className="input input-bordered"
               required
@@ -134,6 +166,7 @@ const UpdateCoffee = () => {
             <input
               type="text"
               name="details"
+              defaultValue={details}
               placeholder="Enter coffee details"
               className="input input-bordered"
               required
@@ -148,7 +181,23 @@ const UpdateCoffee = () => {
             <input
               type="url"
               name="photo"
+              defaultValue={photo}
               placeholder="Enter photo url"
+              className="input input-bordered"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text text-base text-[#1B1A1ACC] font-raleway font-bold">
+                Price
+              </span>
+            </label>
+            <input
+              type="text"
+              name="price"
+              defaultValue={price}
+              placeholder="Enter coffee price"
               className="input input-bordered"
               required
             />

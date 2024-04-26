@@ -1,7 +1,11 @@
 import { FaArrowLeft } from "react-icons/fa6"
-import { Link } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 
 const CoffeeDetails = () => {
+  const coffee = useLoaderData()
+
+  const { photo, name, chef, supplier, taste, category, details } = coffee
+
   return (
     <div className="bg-add-coffee flex flex-col justify-center items-center pt-10 pb-20">
       <div className="w-full flex justify-start">
@@ -12,33 +16,38 @@ const CoffeeDetails = () => {
           <FaArrowLeft /> Back to home
         </Link>
       </div>
-      <div className="card shrink-0 w-full max-w-5xl shadow-md bg-[#F7F7F7] flex justify-center items-center gap-7 px-5 py-10">
+      <div className="card shrink-0 w-full max-w-5xl shadow-md bg-[#F7F7F7B3] flex justify-center items-center gap-7 px-5 py-10">
         <div className="card lg:card-side">
           <figure>
             <img
-              src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-              alt="Album"
+              src={photo}
+              alt={name}
             />
           </figure>
           <div className="card-body">
-            <h3 className="text-3xl text-shadow-xl font-rancho">Niceties</h3>
-            <p>
-              Name: <span>name</span>
+            <h3 className="text-5xl text-shadow-xl font-rancho mb-5">
+              Niceties
+            </h3>
+            <p className="text-lg font-raleway font-semibold">
+              Name: <span className="text-gray-500 font-normal">{name}</span>
             </p>
-            <p>
-              Chef: <span>chef</span>
+            <p className="text-lg font-raleway font-semibold">
+              Chef: <span className="text-gray-500 font-normal">{chef}</span>
             </p>
-            <p>
-              Supplier: <span>supplier</span>
+            <p className="text-lg font-raleway font-semibold">
+              Supplier:{" "}
+              <span className="text-gray-500 font-normal">{supplier}</span>
             </p>
-            <p>
-              Taste: <span>taste</span>
+            <p className="text-lg font-raleway font-semibold">
+              Taste: <span className="text-gray-500 font-normal">{taste}</span>
             </p>
-            <p>
-              Category: <span>category</span>
+            <p className="text-lg font-raleway font-semibold">
+              Category:{" "}
+              <span className="text-gray-500 font-normal">{category}</span>
             </p>
-            <p>
-              Details: <span>details</span>
+            <p className="text-lg font-raleway font-semibold">
+              Details:{" "}
+              <span className="text-gray-500 font-normal">{details}</span>
             </p>
           </div>
         </div>

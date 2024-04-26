@@ -1,6 +1,6 @@
 const express = require("express")
 const cors = require("cors")
-const { MongoClient, ServerApiVersion } = require("mongodb")
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb")
 
 require("dotenv").config()
 
@@ -33,7 +33,53 @@ async function run() {
     const coffeeCollection = client.db("coffeeDB").collection("coffee")
 
     app.get("/coffees", async (req, res) => {
-      res.send("Coffees")
+      const coffees = await coffeeCollection.find().toArray()
+      res.send(coffees)
+    })
+
+    app.get("/coffee/:id", async (req, res) => {
+      const id = req.params.id
+      const coffee = { _id: new ObjectId(id) }
+      const getCoffee = await coffeeCollection.findOne(coffee)
+      res.send(getCoffee)
+    })
+
+    app.post("/coffee", async (req, res) => {
+      const coffee = req.body
+      const addCoffee = await coffeeCollection.insertOne(coffee)
+      res.send(addCoffee)
+    })
+
+    app.put("/coffee/:id", async (req, res) => {
+      const id = req.params.id
+      const coffee = req.body
+      const filter = { _id: new ObjectId(id) }
+      const options = { upsert: true }
+      const updatedCoffee = {
+        $set: {
+          name: coffee.name,
+          chef: coffee.chef,
+          supplier: coffee.supplier,
+          taste: coffee.taste,
+          category: coffee.category,
+          details: coffee.details,
+          photo: coffee.photo,
+          price: coffee.price,
+        },
+      }
+      const putCoffee = await coffeeCollection.updateOne(
+        filter,
+        updatedCoffee,
+        options
+      )
+      res.send(putCoffee)
+    })
+
+    app.delete("/coffee/:id", async (req, res) => {
+      const id = req.params.id
+      const coffee = { _id: new ObjectId(id) }
+      const deleteCoffee = await coffeeCollection.deleteOne(coffee)
+      res.send(deleteCoffee)
     })
 
     // Send a ping to confirm a successful connection
@@ -43,7 +89,7 @@ async function run() {
     )
   } finally {
     // Ensures that the client will close when you finish/error
-    await client.close()
+    // await client.close()
   }
 }
 run().catch(console.dir)
